@@ -146,3 +146,35 @@ app.listen(portNo,()=>{console.log("Server Started at 9999")})
 // > docker service scale myservice=2
 
 // ```
+
+
+// const express =  require('express');
+// const mysql = require('mysql');
+// const config = require('config');
+// const appForEmps = express.Router();
+// var connection = mysql.createConnection({
+//     host     : config.get("host"),
+//     user     : config.get("user"),
+//     password : config.get("password"),
+//     database : config.get("database")
+//    });
+
+
+// appForEmps.get("/", (request, response)=>{
+//     connection.query("select * from Emp", (error, result)=>{
+//                 if(error==null)
+//                 {
+//                     var data = JSON.stringify(result) 
+//                     response.setHeader("Content-Type","application/json");
+//                     response.write(data);
+//                 } 
+//                 else
+//                 {
+//                     console.log(error);
+//                     response.setHeader("Content-Type","application/json");
+//                     response.write(error)
+//                 }
+//                 response.end();
+//     })
+
+// })

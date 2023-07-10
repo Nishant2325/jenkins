@@ -2,7 +2,7 @@ const express =  require('express');
 const mysql = require('mysql');
 const config = require('config');
 const appForEmps = express.Router();
-var connection = mysql.createConnection({
+var connection = mysql.createPool({
     host     : config.get("host"),
     user     : config.get("user"),
     password : config.get("password"),
